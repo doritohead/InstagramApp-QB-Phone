@@ -51,11 +51,39 @@ INSTALL INSTRUCTIONS
         Alerts = 0,
     },```
 
-4: Inside the index.html file paste ```<link rel="stylesheet" href="./css/instagram.css">``` at the top. Should look like this
+4.a: Inside the index.html file paste ```<link rel="stylesheet" href="./css/instagram.css">``` at the top. Should look like this
 ![image](https://user-images.githubusercontent.com/81892751/212876472-a0d6a4fe-aea7-43f4-aa53-226308f03dbf.png)
 
 Then at the bottom of the index.html paste this ```<script src="./js/instagram.js"></script>``` Should look like this
 ![image](https://user-images.githubusercontent.com/81892751/212876849-dd16bee2-a04d-47a4-9cf6-01147a762933.png)
+
+4.b: Inside the index.html find the search for ```twitter-app``` and underneath that post this 
+```
+<div class="instagram-app">
+    <div class="instagram-app-loading">
+        <img src="../html/img/instagram_logo2.png" class="instagram-logo-loading">
+    </div>
+    <div class="instagram-app-loaded">
+        <div class="instagram-home">
+            <div class="instagram-header">
+                <img src="../html/img/instagram_logo.png" class="instagram-logo">
+                <div class="instagram-new-post" data-toggle="tooltip" title="New Post"> <i class="far fa-plus-square"></i></div>
+            </div>
+        </div>
+        <div class="instagram-home-tab"></div>
+        <div class="phone-menu-body" id="ig-box-textt">
+            <div class="phone-menu-main">
+                <input class="phone-menu-text ig-box-textt-input" type="text" maxlength="200"><i class="fas fa-sticky-note" id="phone-menu-icon"></i><span class="phone-menu-title">Message</span>
+                <input class="phone-menu-text ig-box-image-input" type="text"><i class="fas fa-image" id="phone-menu-icon"></i><span class="phone-menu-title">URL (JPG/PNG)</span>
+                <p> </p>
+                <div class="phone-menu-button phone-menu-cancel" id="box-new-cancel">Cancel</div>
+                <div class="phone-menu-button phone-menu-accept" id="instagram-camera"> <i class="fas fa-camera"></i></div>
+                <div class="phone-menu-button phone-menu-accept" id="instagram-send">Send</div>
+            </div>
+        </div>
+    </div> 
+</div>``` should look like this
+![image](https://user-images.githubusercontent.com/81892751/212889529-21982dfc-044d-49ec-8a6b-32f5f2a426e8.png)
 
 5.a: Inside the app.js file search for ```if (PressedApplication == "twitter")``` Directly underneath that paste this ```
 else if (PressedApplication == "instagram") {
