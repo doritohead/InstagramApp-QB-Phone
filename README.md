@@ -2,6 +2,7 @@ Instagram App made and tested with https://github.com/Renewed-Scripts/qb-phone -
 
 May still work with stock version of qb-phone https://github.com/qbcore-framework/qb-phone
 
+--------------------------------------------------------------------------------------------------
 
 Features
 
@@ -13,16 +14,19 @@ Features
 
 • Saved to database and fetched on restarts (duration can be edited inside the config.lua
 
+--------------------------------------------------------------------------------------------------
+
 W.I.P
 
 • Likes and comments on photos
 
 • And anything anyone can think of adding
 
+--------------------------------------------------------------------------------------------------
+
 Preview - https://streamable.com/l396rd
 
-
-
+--------------------------------------------------------------------------------------------------
 
 INSTALL INSTRUCTIONS
 
