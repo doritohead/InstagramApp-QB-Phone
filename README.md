@@ -8,7 +8,7 @@ Features
 
 • Take and upload real time photos (or post using url)
 
-• Report posts to admin
+• Report posts to admin (setup your own feature depending on how you want admin to be alerted)
 
 • Delete posts you have put up
 
