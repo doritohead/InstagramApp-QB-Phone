@@ -128,7 +128,11 @@ $(document).on('click', '#instagram-send', function(e){ // Submit Button For Twi
     };
 });
 
-$(document).on('click', '.insta-comment', function(Post){
+//$(document).on('click', '.insta-comment', function(Post){
+
+//});
+
+$(document).on('click','.insta-flag',function(Post){
     Post.preventDefault();
     var IGName = $(this).parent().parent().data('ighandler');
     var IGMessage = $(this).parent().data('igmessage');
@@ -137,7 +141,7 @@ $(document).on('click', '.insta-comment', function(Post){
         message: IGMessage,
     }))
 });
-
+    
 $(document).on('click','.insta-delete',function(Post){
     Post.preventDefault();
     var source = $(this).parent().parent().data('igid');
