@@ -128,6 +128,10 @@ $(document).on('click', '#instagram-send', function(e){ // Submit Button For Twi
     };
 });
 
+//$(document).on('click', '.insta-like', function(Post){
+
+//});
+
 //$(document).on('click', '.insta-comment', function(Post){
 
 //});
