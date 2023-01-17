@@ -4,13 +4,19 @@ May still work with stock version of qb-phone https://github.com/qbcore-framewor
 
 
 Features
+
 • Take and upload real time photos (or post using url)
+
 • Report posts to admin
+
 • Delete posts you have put up
+
 • Saved to database and fetched on restarts (duration can be edited inside the config.lua
 
 W.I.P
+
 • Likes and comments on photos
+
 • And anything anyone can think of adding
 
 Preview - https://streamable.com/l396rd
