@@ -99,7 +99,7 @@ else if (PressedApplication == "instagram") {
 5.b: Inside app.js search for ```QB.Phone.Functions.Open = function(data)``` inside that function paste this ```QB.Phone.Functions.LoadPosts(data.Posts);```
 Should look like this ![image](https://user-images.githubusercontent.com/81892751/212877958-e30dc033-429f-4935-814a-75ea7f3b89ca.png)
 
-5.c: Inside app.js search for `````` and paste ```
+5.c: Inside app.js search for ```case "UpdateTweets":``` and paste ```
 case "UpdatePosts":
   if (QB.Phone.Data.currentApplication == "instagram") {
     QB.Phone.Functions.LoadPosts(event.data.Posts);
