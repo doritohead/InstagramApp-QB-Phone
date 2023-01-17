@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.instagram-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    overflow: hidden;
+}
+
+.instagram-home {
+    position: relative;
+    left: 0;
+}
+
+.instagram-header {
+    position: relative;
+    height: 6.5vh;
+    width: 100%;
+    background-color: #000000;
+    border-bottom: 2px solid white;
+}
+
+.instagram-header > p {
+    padding-top: 1.3vh;
+    padding-left: 2vh;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5vh;
+}
+
+.instagram-logo {
+    position: absolute;
+    width: 100px;
+    top: 3vh;
+    left: 0.275vh;
+}
+
+.instagram-logo-loading {
+    position: absolute;
+    width: 100px;
+    top: 45%;
+}
+
+.instagram-new-post {
+    position: absolute;
+    width: 100px;
+    top: 2.0vh;
+    left: 25vh;
+    color: #ffffff;
+    z-index: 999;
+}
+
+.instagram-new-post:hover {
+    color: #696969;
+}
+
+.instagram-new-post > i {
+    line-height: 5.5vh;
+    font-size: 2vh;
+    color: white;
+}
+
+.instagram-home-tab {
+    display: block;
+    position: absolute;
+    height: 88%;
+    width: 104%;
+    top: 6.6vh;
+    overflow: hidden;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+}
+
+.instagram-home-tab::-webkit-scrollbar {
+    width: .7vh;
+}
+
+.instagram-home-tab::-webkit-scrollbar-thumb {
+    display: 'none';
+}
+
+.instagram-home-tab::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.instagram-post {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-bottom: 0.5vh;
+    background-color: rgba(100, 42, 42, 0);
+    left: 0.0%;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.insta-poster {
+    padding-left: 3.2vh;
+    padding-top: 0.8vh;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.0vh;
+    font-weight: 500;
+}
+
+.insta-poster > span {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.0vh;
+    font-weight: 500;
+    top: -.1vh;
+}
+
+.instagram-poster-picture {
+    position: absolute;
+    display: block;
+    left: 5px;
+    top: 2px;
+    height: 2.5vh;
+    width: 2.5vh;
+    padding-top: 2px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(70, 70, 70);
+    color: white;
+}
+
+.insta-image {
+    margin-top: 1vh;
+    max-height: 30vh;
+}
+
+.insta-post-footer {
+    position: relative;
+    height: auto;
+    min-height: 2vh;
+    width: 100%;
+    background-color: rgba(100, 42, 42, 0);
+}
+
+.insta-post-footer > p {
+    padding-top: 2vh;
+    padding-left: 1vh;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5vh;
+}
+
+.insta-like {
+    position: absolute;
+    left: 10px;
+    bottom: 0.3vh;
+    color: rgb(255, 255, 255);
+    transition: .05 linear;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.0vh;
+    z-index: 100;
+}
+
+.insta-like:hover i {
+    color: rgb(179, 179, 179);
+}
+
+.insta-comment {
+    position: absolute;
+    left: 30px;
+    bottom: 0.3vh;
+    color: rgb(255, 255, 255);
+    transition: .05 linear;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.0vh;
+    z-index: 100;
+}
+
+.insta-comment:hover i {
+    color: rgb(179, 179, 179);
+}
+
+.insta-delete {
+    position: absolute;
+    left: 50px;
+    bottom: 0.3vh;
+    color: rgb(255, 255, 255);
+    transition: .05 linear;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.0vh;
+    z-index: 100;
+}
+
+.insta-delete:hover i {
+    color: rgb(179, 179, 179);
+}
+
+.insta-caption {
+    padding-left: 0.8vh;
+    padding-bottom: 2.5vh;
+    top: -5vh;
+    font-size: 1.2vh;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.insta-time {
+    position: absolute;
+    right: 10px;
+    bottom: 0.3vh;
+    color: rgb(255, 255, 255);
+    transition: .05 linear;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.0vh;
+    z-index: 100;
+}
+
+.insta-post-options {
+    position: absolute;
+    top: 0.5vh;
+    right: 1.5vh;
+    font-size: 1.2vh;
+    color: #FFFFFF;
+}
+
+.insta-post-options:hover i {
+    color: rgb(179, 179, 179);
+}
