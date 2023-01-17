@@ -12,7 +12,22 @@ INSTALL INSTRUCTIONS
 
 2: Upload the sql file to save and store instagram posts
 
-3: Inside the config.lua paste this ```Config.PostDuration = 48``` this will show all posts inside this period (can be changed to how you like)
+3.a: Inside the config.lua paste this ```Config.PostDuration = 48``` this will show all posts inside this period (can be changed to how you like)
+
+3.b: Inside the config.lua paste this inside the applications ```
+    ["instagram"] = {
+        app = "instagram",
+        color = "#d62976",
+        color2 = "#fa7e1e",
+        icon = "fab fa-instagram",
+        tooltipText = "Instagram",
+        tooltipPos = "top",
+        style = "padding-right: .08vh; font-size: 3.3vh";
+        job = false,
+        blockedjobs = {},
+        slot = 10, -- what number you like
+        Alerts = 0,
+    },```
 
 4: Inside the index.html file paste ```<link rel="stylesheet" href="./css/instagram.css">``` at the top. Should look like this
 ![image](https://user-images.githubusercontent.com/81892751/212876472-a0d6a4fe-aea7-43f4-aa53-226308f03dbf.png)
