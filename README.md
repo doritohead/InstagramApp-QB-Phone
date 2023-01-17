@@ -107,7 +107,7 @@ case "UpdatePosts":
 break;```  directly below. Should look like this
 ![image](https://user-images.githubusercontent.com/81892751/212878780-db5fa451-e8b6-40fa-b0b8-a585707c5d48.png)
 
-6.a: Inside client/main.lua inside the PhoneData at the top paste ```Posts = {}```
+6.a: Inside client/main.lua inside the PhoneData at the top paste ```Posts = {},```
 ![image](https://user-images.githubusercontent.com/81892751/212879246-5f931a49-ea1f-40ac-b93b-4e3ff2a65526.png)
 
 6.b: Inside client/main.lua search for ```local function LoadPhone()``` and paste this ```if pData.Posts and next(pData.Posts) then
@@ -118,7 +118,7 @@ end``` below Tweets like this
 6.c: Inside client/main.lua search for ```local function OpenPhone()``` and paste this ```Posts = PhoneData.Posts,``` below Tweets like this
 ![image](https://user-images.githubusercontent.com/81892751/212880357-e1fbee4a-cfc1-44df-8deb-2cc72fa8caeb.png)
 
-6.d: Inside client/main.lua search for the event ```RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()``` and paste this ``` Posts ={}``` inside like this
+6.d: Inside client/main.lua search for the event ```RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()``` and paste this ``` Posts = {},``` inside like this
 ![image](https://user-images.githubusercontent.com/81892751/212880659-c55f860c-bf53-4c25-9f32-dbeb2351cb94.png)
 
 7: Inside server/main.lua search for the callback ```QBCore.Functions.CreateCallback('qb-phone:server:GetPhoneData', function(source, cb)``` and inside paste this ```Posts = Posts,``` like this
