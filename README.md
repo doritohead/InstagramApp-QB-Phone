@@ -2,6 +2,7 @@ Instagram App made and tested with https://github.com/Renewed-Scripts/qb-phone -
 
 May still work with stock version of qb-phone https://github.com/qbcore-framework/qb-phone
 
+Preview - https://streamable.com/l396rd
 
 
 
