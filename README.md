@@ -82,7 +82,9 @@ Then at the bottom of the index.html paste this ```<script src="./js/instagram.j
             </div>
         </div>
     </div> 
-</div>``` should look like this
+</div>
+```
+should look like this
 ![image](https://user-images.githubusercontent.com/81892751/212889529-21982dfc-044d-49ec-8a6b-32f5f2a426e8.png)
 
 5.a: Inside the app.js file search for ```if (PressedApplication == "twitter")``` Directly underneath that paste this ```
