@@ -125,7 +125,9 @@ end``` below Tweets like this
 ![image](https://user-images.githubusercontent.com/81892751/212880945-d465905e-626b-4a92-b58c-368b2424186f.png)
 
 8: To stop your buttons looking like this
+
 ![image](https://user-images.githubusercontent.com/81892751/213141328-4e7306b0-6908-4402-85de-f0f038fe2d4d.png)
+
 Inside the phone.css find ```.phone-menu-cancel``` and replace the buttons with this
 ```
 .phone-menu-cancel{
