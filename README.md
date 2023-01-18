@@ -145,4 +145,4 @@ Inside the phone.css find ```.phone-menu-cancel``` and replace the buttons with 
 }
 .phone-menu-accept:hover{
     background: #6cac59;
-}```
+}
