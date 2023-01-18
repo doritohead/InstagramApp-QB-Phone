@@ -128,7 +128,7 @@ end``` below Tweets like this
 
 ![image](https://user-images.githubusercontent.com/81892751/213141328-4e7306b0-6908-4402-85de-f0f038fe2d4d.png)
 
-Inside the phone.css find ```.phone-menu-cancel``` and replace the buttons with this
+Inside the phone.css find ```.phone-menu-cancel``` and ```.phone-menu-accept``` and replace the buttons with this
 ```
 .phone-menu-cancel{
     background:#d46215;
