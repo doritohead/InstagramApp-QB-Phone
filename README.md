@@ -57,7 +57,7 @@ INSTALL INSTRUCTIONS
 Then at the bottom of the index.html paste this ```<script src="./js/instagram.js"></script>``` Should look like this
 ![image](https://user-images.githubusercontent.com/81892751/212876849-dd16bee2-a04d-47a4-9cf6-01147a762933.png)
 
-4.b: Inside the index.html find the search for ```twitter-app``` and underneath that post this 
+4.b: Inside the index.html find the search for ```twitter-app``` and underneath that post this (MAKE SURE YOU PLACE BETWEEN TWITTER-APP AND BANK-APP)
 ```
 <div class="instagram-app">
     <div class="instagram-app-loading">
