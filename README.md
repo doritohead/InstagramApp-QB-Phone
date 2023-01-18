@@ -123,3 +123,24 @@ end``` below Tweets like this
 
 7: Inside server/main.lua search for the callback ```QBCore.Functions.CreateCallback('qb-phone:server:GetPhoneData', function(source, cb)``` and inside paste this ```Posts = Posts,``` like this
 ![image](https://user-images.githubusercontent.com/81892751/212880945-d465905e-626b-4a92-b58c-368b2424186f.png)
+
+8: To stop your buttons looking like this
+![image](https://user-images.githubusercontent.com/81892751/213141328-4e7306b0-6908-4402-85de-f0f038fe2d4d.png)
+Inside the phone.css find ```.phone-menu-cancel``` and replace the buttons with this
+```
+.phone-menu-cancel{
+    background:#d46215;
+    margin-left: 15%;
+    padding: 4.0%;
+}
+.phone-menu-cancel:hover{
+    background: #c27e47;
+}
+.phone-menu-accept{
+    background:#90e278;
+    margin-left: 5%;
+    padding: 4.0%;
+}
+.phone-menu-accept:hover{
+    background: #6cac59;
+}```
