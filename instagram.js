@@ -46,6 +46,11 @@ QB.Phone.Functions.LoadPosts = function(Posts) {
                 let captionName = InstaHandle.bold()
                 var IGMessage = captionName.replace(" ", "_") + ' ' + Post.message
             }
+            if (Post.likes == 0) {
+                likes = 0
+            } else {
+                likes = Post.likes
+            }
             if (Post.citizenid === QB.Phone.Data.PlayerData.citizenid){
                 var PostElement = '<div class="instagram-post" data-igcid="'+Post.citizenid+'" data-igid ="'+Post.postId+'" data-ighandler="'+InstaHandle.replace(" ", "_") + '" data-type ="'+Post.type+'">'+
                         '<div class="instagram-poster-picture"><i class="fas fa-user"></i></div>' +
@@ -53,7 +58,8 @@ QB.Phone.Functions.LoadPosts = function(Posts) {
                         '<div class="insta-post-options"><i class="fas fa-ellipsis-v"></i></div>' +
                         '<img class="insta-image" src= ' + Post.url + ' style = " display: block; width: 100%; z-index: 1; left:-8px; height: auto;">' +
                         '<div class="insta-post-footer">' +
-                            '<div class="insta-like"><i class="far fa-heart"></i></div>' +
+                            '<div class="insta-like"><i class="far fa-heart"></i> '+likes+'</div>' +
+                            '<div class="insta-liked"><i class="fas fa-heart"></i> '+likes+'</div>' +
                             '<div class="insta-comment"><i class="far fa-comment"></i></div>' +
                             '<div class="insta-delete"><i class="fas fa-trash"></i></div>' +
                             '<div class="insta-caption">' + IGMessage + '</div>' +
@@ -68,7 +74,8 @@ QB.Phone.Functions.LoadPosts = function(Posts) {
                     '<div class="insta-post-options"><i class="fas fa-ellipsis-v"></i></div>' +
                     '<img class="insta-image" src= ' + Post.url + ' style = " display: block; width: 100%; z-index: 1; left:-8px; height: auto;">' +
                     '<div class="insta-post-footer">' +
-                        '<div class="insta-like"><i class="far fa-heart"></i></div>' +
+                        '<div class="insta-like"><i class="far fa-heart"></i> '+likes+'</div>' +
+                        '<div class="insta-liked"><i class="fas fa-heart"></i> '+likes+'</div>' +
                         '<div class="insta-comment"><i class=far fa-comment"></i></div>' +
                         '<div class="insta-caption">' + IGMessage + '</div>' +
                         '<div class="insta-time">' + TimeAgo + '</div>' +
@@ -128,15 +135,51 @@ $(document).on('click', '#instagram-send', function(e){ // Submit Button For Twi
     };
 });
 
-//$(document).on('click', '.insta-like', function(Post){
+$(document).on('click', '.insta-image', function(Post){
+    Post.preventDefault();
+    let source = $(this).attr('src')
+    QB.Screen.popUp(source)
+});
 
-//});
+$(document).on('click', '.insta-like', function(Post){
+    Post.preventDefault();
+    $(this).parent().parent().find(".insta-like").css({"display":"none"});
+    $(this).parent().parent().find(".insta-liked").css({"display":"block"});
+});
 
-//$(document).on('click', '.insta-comment', function(Post){
+$(document).on('click', '.insta-liked', function(Post){
+    Post.preventDefault();
+    $(this).parent().parent().find(".insta-liked").css({"display":"none"});
+    $(this).parent().parent().find(".insta-like").css({"display":"block"});
+});
 
-//});
+$(document).on('click', '.insta-comment', function(Post){
+    Post.preventDefault();
+    ClearInputNew()
+    $('#ig-comment-textt').fadeIn(350);
+});
 
-$(document).on('click','.insta-flag',function(Post){
+$(document).on('click', '#instagram-send-comment', function(Post){ // Submit Button For Twitter Message
+    Post.preventDefault();
+
+    var PostMessage = $(".ig-comment-textt-input").val();
+    if (PostMessage !== "") {
+        var CurrentDate = new Date();
+        if (PostMessage != ""){
+            setTimeout(function(){
+                ConfirmationFrame()
+            }, 150);
+        }
+        QB.Phone.Notifications.Add("fab fa-instagram", "Instagram", "New comment posted!", "#1DA1F2", 2500);
+        ClearInputNew();
+        $('#ig-comment-textt').fadeOut(350);
+        $('.ig-comment-textt-input').val("");
+    } else {
+        QB.Phone.Notifications.Add("fab fa-instagram", "Instagram", "Make sure you write a comment!", "#1DA1F2", 2500);
+    };
+});
+
+$(document).on('click','.insta-post-options',function(Post){
     Post.preventDefault();
     var IGName = $(this).parent().parent().data('ighandler');
     var IGMessage = $(this).parent().data('igmessage');
