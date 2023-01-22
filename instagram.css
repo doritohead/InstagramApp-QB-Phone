@@ -161,9 +161,25 @@
     color: rgb(179, 179, 179);
 }
 
+.insta-liked {
+    position: absolute;
+    display: none;
+    left: 10px;
+    bottom: 0.3vh;
+    color: rgb(204, 20, 20);
+    transition: .05 linear;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.0vh;
+    z-index: 100;
+}
+
+.insta-liked:hover i {
+    color: rgb(255, 0, 0);
+}
+
 .insta-comment {
     position: absolute;
-    left: 30px;
+    left: 50px;
     bottom: 0.3vh;
     color: rgb(255, 255, 255);
     transition: .05 linear;
@@ -178,7 +194,7 @@
 
 .insta-delete {
     position: absolute;
-    left: 50px;
+    left: 70px;
     bottom: 0.3vh;
     color: rgb(255, 255, 255);
     transition: .05 linear;
