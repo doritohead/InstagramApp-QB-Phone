@@ -20,6 +20,8 @@ W.I.P
 
 • Likes and comments on photos
 
+• Customisable Account name and Profile Picture
+
 • And anything anyone can think of adding
 
 --------------------------------------------------------------------------------------------------
