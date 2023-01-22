@@ -37,7 +37,8 @@ CREATE TABLE `phone_instagram` (
   `message` text DEFAULT NULL,
   `url` text DEFAULT NULL,
   `postId` varchar(25) NOT NULL,
-  `date` datetime DEFAULT current_timestamp()
+  `date` datetime DEFAULT current_timestamp(),
+  `likes` longtext NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
